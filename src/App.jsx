@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import AddRenter from "./components/AddRenter";
 import AddRentModal from "./components/AddRentModal";
 import Header from "./components/Header";
 import PayRentModal from "./components/PayRentModal";
 import RentTracker from "./components/RentTracker";
+import fetchRenters from "./redux/rents/thunk/fetchRenters";
+import { useDispatch } from "react-redux";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRenters());
+  }, [])
   return (
     <div className="relative hind-siliguri-regular p-4 bg-neutral-900 text-neutral-200 min-h-screen w-full">
       <Header />

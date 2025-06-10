@@ -1,4 +1,11 @@
-import { ADD_RENT, ADD_RENTER, EDIT_RENTER, PAY_RENT } from "./actionTypes"
+import { ADD_RENT, ADD_RENTER, EDIT_RENTER, LOAD_RENTERS, PAY_RENT } from "./actionTypes"
+
+export const loadRenters = (renters) => {
+    return {
+        type: LOAD_RENTERS,
+        payload: renters
+    }
+}
 
 export const addRenter = (renter) => {
     return {

@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import SingleRenter from "./SingleRenter";
 
 const RenterTable = () => {
@@ -12,18 +13,9 @@ const RenterTable = () => {
     "স্ট্যাটাস",
     "অ্যাকশন",
   ];
-  const TABLE_BODY = [
-    {
-      apartment: "1A",
-      name: "Md. Raju",
-      mobile: "0170992323",
-      baseRent: "6000",
-      lastRentMonth: "May",
-      lastPaymentDate: "3 June, 2025",
-      dueAmount: "8000",
-      status: "বকেয়া",
-    },
-  ];
+  
+  const rentersData = useSelector((state) => state.rents.renters);
+
   return (
     <div className="w-full overflow-x-auto h-[400px] overflow-y-auto">
       <table className="w-full mt-4 bg-neutral-800 rounded-lg overflow-y-scroll">
@@ -37,8 +29,8 @@ const RenterTable = () => {
           </tr>
         </thead>
         <tbody className="">
-          {TABLE_BODY.map((body) => (
-            <SingleRenter key={body.apartment} body={body} />
+          {rentersData.map((renter) => (
+            <SingleRenter key={renter.id} renter={renter} />
           ))}
         </tbody>
       </table>

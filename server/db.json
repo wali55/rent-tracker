@@ -1,0 +1,26 @@
+{
+  "renters": [
+    {
+      "name": "Md Raju",
+      "apartment": "1A",
+      "mobile": "01734838444",
+      "baseRent": 6000,
+      "lastRentMonth": "May",
+      "lastPaymentDate": "2 June, 2025",
+      "dueAmount": 0,
+      "status": "paid",
+      "id": 1
+    },
+    {
+      "name": "Md Tamim",
+      "apartment": "2B",
+      "mobile": "01834838444",
+      "baseRent": 7000,
+      "lastRentMonth": "April",
+      "lastPaymentDate": "1 May, 2025",
+      "dueAmount": 1000,
+      "status": "due",
+      "id": 2
+    }
+  ]
+}
