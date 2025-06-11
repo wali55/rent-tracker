@@ -9,4 +9,5 @@ export const initialState = {
     payRentModal: false,
     editRenterModal: false,
     deleteRenterModal: false,
+    loading: false,
 }

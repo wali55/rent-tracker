@@ -4,6 +4,7 @@ import {
   DELETE_RENTER,
   EDIT_RENTER,
   LOAD_RENTERS,
+  LOADING,
   OPEN_ADD_RENT_MODAL,
   OPEN_DELETE_RENTER_MODAL,
   OPEN_EDIT_RENTER_MODAL,
@@ -17,7 +18,7 @@ const rentReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_RENTERS:
       if (action.payload.length === 0) {
-        return;
+        return state;
       }
       const allRenters = action.payload.length;
       const paidRenters = action.payload.filter(
@@ -32,6 +33,7 @@ const rentReducer = (state = initialState, action) => {
         totalRenters: allRenters,
         totalPaidRenters: paidRenters,
         totalDueRenters: dueRenters,
+        loading: false
       };
     case ADD_RENTER:
       return {
@@ -39,6 +41,7 @@ const rentReducer = (state = initialState, action) => {
         renters: [...state.renters, action.payload],
         totalRenters: state.totalRenters + 1,
         totalPaidRenters: state.totalPaidRenters + 1,
+        loading: false
       };
     case EDIT_RENTER:
       return {
@@ -50,6 +53,7 @@ const rentReducer = (state = initialState, action) => {
             return renter;
           }
         }),
+        loading: false
       };
     case DELETE_RENTER:
       return {
@@ -57,6 +61,7 @@ const rentReducer = (state = initialState, action) => {
         renters: state.renters.filter(
           (renter) => renter.id !== action.payload
         ),
+        loading: false
       };
     case ADD_RENT:
       return {
@@ -76,6 +81,7 @@ const rentReducer = (state = initialState, action) => {
         }),
         totalPaidRenters: state.totalPaidRenters - 1,
         totalDueRenters: state.totalDueRenters + 1,
+        loading: false
       };
     case PAY_RENT:
       return {
@@ -96,6 +102,7 @@ const rentReducer = (state = initialState, action) => {
             return renter;
           }
         }),
+        loading: false
       };
     case SET_RENTER_ID:
       return {
@@ -121,6 +128,11 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         deleteRenterModal: action.payload
+      }
+    case LOADING:
+      return {
+        ...state,
+        loading: action.payload
       }
     default:
       return state;

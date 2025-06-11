@@ -9,3 +9,4 @@ export const OPEN_EDIT_RENTER_MODAL = "rent/openEditRenterModal";
 export const OPEN_DELETE_RENTER_MODAL = "rent/openDeleteRenterModal";
 export const OPEN_ADD_RENT_MODAL = "rent/openAddRentModal";
 export const OPEN_PAY_RENT_MODAL = "rent/openPayRentModal";
+export const LOADING = "rent/loading";

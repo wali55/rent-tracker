@@ -1,37 +1,48 @@
 {
   "renters": [
     {
-      "name": "Md Raju ",
-      "apartment": "5A",
-      "mobile": "01734838466",
-      "baseRent": "7700",
-      "lastRentMonth": "May",
-      "lastPaymentDate": "2 June, 2025",
-      "dueAmount": 0,
-      "status": "paid",
-      "id": "1"
-    },
-    {
-      "name": "Md Tamim",
-      "apartment": "2C",
-      "mobile": "01834838444",
-      "baseRent": "7500",
-      "lastRentMonth": "May",
-      "lastPaymentDate": "1 May, 2025",
-      "dueAmount": 9000,
-      "status": "due",
-      "id": "2"
-    },
-    {
       "id": "53bd",
       "name": "Md Topu",
       "apartment": "1B",
       "mobile": "01332737",
       "baseRent": "7000",
       "lastRentMonth": "April",
+      "lastPaymentDate": "2025-06-01",
+      "dueAmount": 0,
+      "status": "paid"
+    },
+    {
+      "id": "dc45",
+      "name": "Mr Rony",
+      "apartment": "1C",
+      "mobile": "01767927356",
+      "baseRent": "6500",
+      "lastRentMonth": "",
       "lastPaymentDate": "",
-      "dueAmount": 7500,
-      "status": "due"
+      "dueAmount": 0,
+      "status": "paid"
+    },
+    {
+      "id": "40b6",
+      "name": "Mr Tanvir",
+      "apartment": "2C",
+      "mobile": "015345845",
+      "baseRent": "6000",
+      "lastRentMonth": "",
+      "lastPaymentDate": "",
+      "dueAmount": 0,
+      "status": "paid"
+    },
+    {
+      "id": "deb4",
+      "name": "Mr Jaman",
+      "apartment": "2A",
+      "mobile": "01734834843",
+      "baseRent": "6500",
+      "lastRentMonth": "",
+      "lastPaymentDate": "",
+      "dueAmount": 0,
+      "status": "paid"
     }
   ]
 }
