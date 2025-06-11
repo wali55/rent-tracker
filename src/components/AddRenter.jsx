@@ -17,7 +17,7 @@ const AddRenter = () => {
     const {name, value} = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value.trim()
     })
   }
 
@@ -33,19 +33,19 @@ const AddRenter = () => {
       <div className="flex flex-col gap-2">
         <div className="w-full flex flex-col gap-2">
           <label htmlFor="name">নাম</label>
-          <input value={formData.name} onChange={handleChange} type="text" id="name" name="name" className="border rounded-md" />
+          <input value={formData.name} onChange={handleChange} type="text" id="name" name="name" className="border rounded-md p-1" />
         </div>
         <div className="w-full flex flex-col gap-2">
           <label htmlFor="apartment">এপার্টমেন্ট</label>
-          <input value={formData.apartment} onChange={handleChange} type="text" id="apartment" name="apartment" className="border rounded-md" />
+          <input value={formData.apartment} onChange={handleChange} type="text" id="apartment" name="apartment" className="border rounded-md p-1" />
         </div>
         <div className="w-full flex flex-col gap-2">
           <label htmlFor="mobile">মোবাইল</label>
-          <input value={formData.mobile} onChange={handleChange} type="text" id="mobile" name="mobile" className="border rounded-md" />
+          <input value={formData.mobile} onChange={handleChange} type="text" id="mobile" name="mobile" className="border rounded-md p-1" />
         </div>
         <div className="w-full flex flex-col gap-2">
           <label htmlFor="baseRent">বেসিক ভাড়া (টাকা)</label>
-          <input value={formData.baseRent} onChange={handleChange} type="text" id="baseRent" name="baseRent" className="border rounded-md" />
+          <input value={formData.baseRent} onChange={handleChange} type="text" id="baseRent" name="baseRent" className="border rounded-md p-1" />
         </div>
       </div>
       <button type="submit" className="bg-cyan-900 hover:bg-cyan-950 py-2 rounded-md mt-4 w-full font-semibold cursor-pointer">

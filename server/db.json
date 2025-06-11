@@ -1,10 +1,10 @@
 {
   "renters": [
     {
-      "name": "Md Raju Hasan",
-      "apartment": "1A",
-      "mobile": "01734838445",
-      "baseRent": "5500",
+      "name": "Md Raju ",
+      "apartment": "5A",
+      "mobile": "01734838466",
+      "baseRent": "7700",
       "lastRentMonth": "May",
       "lastPaymentDate": "2 June, 2025",
       "dueAmount": 0,
@@ -16,9 +16,9 @@
       "apartment": "2C",
       "mobile": "01834838444",
       "baseRent": "7500",
-      "lastRentMonth": "April",
+      "lastRentMonth": "May",
       "lastPaymentDate": "1 May, 2025",
-      "dueAmount": 1000,
+      "dueAmount": 9000,
       "status": "due",
       "id": "2"
     },
@@ -28,21 +28,10 @@
       "apartment": "1B",
       "mobile": "01332737",
       "baseRent": "7000",
-      "lastRentMonth": "",
+      "lastRentMonth": "April",
       "lastPaymentDate": "",
-      "dueAmount": 0,
-      "status": "paid"
-    },
-    {
-      "id": "50bd",
-      "name": "Md Hasan",
-      "apartment": "1C",
-      "mobile": "0157439394",
-      "baseRent": "5500",
-      "lastRentMonth": "",
-      "lastPaymentDate": "",
-      "dueAmount": 0,
-      "status": "paid"
+      "dueAmount": 7500,
+      "status": "due"
     }
   ]
 }

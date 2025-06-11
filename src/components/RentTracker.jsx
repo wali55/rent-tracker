@@ -5,7 +5,7 @@ import RenterTable from "./RenterTable";
 
 const RentTracker = () => {
   return (
-    <div className="h-screen w-full lg:w-4/5 mt-4 lg:mt-0">
+    <div className="h-full w-full lg:w-4/5 mt-4 lg:mt-0">
           {/* top */}
           <RenterSummary />
           {/* bottom */}

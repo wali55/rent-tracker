@@ -5,6 +5,7 @@ import {
   EDIT_RENTER,
   LOAD_RENTERS,
   OPEN_ADD_RENT_MODAL,
+  OPEN_DELETE_RENTER_MODAL,
   OPEN_EDIT_RENTER_MODAL,
   OPEN_PAY_RENT_MODAL,
   PAY_RENT,
@@ -43,7 +44,7 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         renters: state.renters.map((renter) => {
-          if (renter.id === parseInt(action.payload.renterId)) {
+          if (renter.id === action.payload.renterId) {
             return { ...renter, ...action.payload.newRenter };
           } else {
             return renter;
@@ -54,19 +55,19 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         renters: state.renters.filter(
-          (renter) => renter.id !== parseInt(action.payload)
+          (renter) => renter.id !== action.payload
         ),
       };
     case ADD_RENT:
       return {
         ...state,
         renters: state.renters.map((renter) => {
-          if (renter.id === parseInt(action.payload.renterId)) {
+          if (renter.id === action.payload.renterId) {
             return {
               ...renter,
               lastRentMonth: action.payload.rent.lastRentMonth,
               dueAmount:
-                action.payload.rent.dueAmount + action.payload.rent.totalBill,
+                parseInt(renter.dueAmount) + parseInt(action.payload.rent.totalBill),
               status: "due",
             };
           } else {
@@ -80,7 +81,7 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         renters: state.renters.map((renter) => {
-          if (renter.id === parseInt(action.payload.renterId)) {
+          if (renter.id === action.payload.renterId) {
             const updatedDueAmount = parseInt(
               action.payload.payment.remainingAmount
             );
@@ -99,7 +100,7 @@ const rentReducer = (state = initialState, action) => {
     case SET_RENTER_ID:
       return {
         ...state,
-        selectedRenterId: parseInt(action.payload)
+        selectedRenterId: action.payload
       }
     case OPEN_EDIT_RENTER_MODAL:
       return {
@@ -115,6 +116,11 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         payRentModal: action.payload
+      }
+    case OPEN_DELETE_RENTER_MODAL:
+      return {
+        ...state,
+        deleteRenterModal: action.payload
       }
     default:
       return state;
