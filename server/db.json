@@ -1,10 +1,10 @@
 {
   "renters": [
     {
-      "name": "Md Raju",
+      "name": "Md Raju Hasan",
       "apartment": "1A",
-      "mobile": "01734838444",
-      "baseRent": 6000,
+      "mobile": "01734838445",
+      "baseRent": "5500",
       "lastRentMonth": "May",
       "lastPaymentDate": "2 June, 2025",
       "dueAmount": 0,
@@ -13,9 +13,9 @@
     },
     {
       "name": "Md Tamim",
-      "apartment": "2B",
+      "apartment": "2C",
       "mobile": "01834838444",
-      "baseRent": 7000,
+      "baseRent": "7500",
       "lastRentMonth": "April",
       "lastPaymentDate": "1 May, 2025",
       "dueAmount": 1000,

@@ -7,5 +7,5 @@ export const initialState = {
     totalDueRenters: 0,
     addRentModal: false,
     payRentModal: false,
-    editRenterModal: false 
+    editRenterModal: false
 }

@@ -5,3 +5,6 @@ export const DELETE_RENTER = "rent/deleteRenter";
 export const ADD_RENT = "rent/addRent";
 export const PAY_RENT = "rent/payRent";
 export const SET_RENTER_ID = "rent/setRenterId";
+export const OPEN_EDIT_RENTER_MODAL = "rent/openEditRenterModal";
+export const OPEN_ADD_RENT_MODAL = "rent/openAddRentModal";
+export const OPEN_PAY_RENT_MODAL = "rent/openPayRentModal";

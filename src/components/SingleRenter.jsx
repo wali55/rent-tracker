@@ -1,8 +1,19 @@
+import { useState } from "react";
 import MenuModal from "./MenuModal";
 import { BsThreeDots } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { setRenterId } from "../redux/rents/actions";
 
 const SingleRenter = ({renter}) => {
+  const dispatch = useDispatch();
+  const [openMenuModal, setOpenMenuModal] = useState(false);
   const {apartment, name, mobile, baseRent, lastRentMonth, lastPaymentDate, dueAmount, status} = renter;
+
+  const handleMenuModalOpen = () => {
+    dispatch(setRenterId(renter.id));
+    setOpenMenuModal(!openMenuModal);
+  }
+
   return (
     <tr
       className="text-left text-neutral-300 text-sm hover:bg-cyan-950 cursor-pointer"
@@ -23,10 +34,10 @@ const SingleRenter = ({renter}) => {
         
       </td>
       <td className="p-3 flex justify-center relative">
-        <div className="border w-fit px-2 py-1 rounded-md hover:border-cyan-300 hover:text-cyan-300">
+        <button onClick={handleMenuModalOpen} className="border w-fit px-2 py-1 rounded-md hover:border-cyan-300 hover:text-cyan-300 cursor-pointer">
           <BsThreeDots />
-        </div>
-        {/* <MenuModal /> */}
+        </button>
+        {openMenuModal && <MenuModal setOpenMenuModal={setOpenMenuModal} />}
       </td>
     </tr>
   );

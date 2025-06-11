@@ -4,6 +4,9 @@ import {
   DELETE_RENTER,
   EDIT_RENTER,
   LOAD_RENTERS,
+  OPEN_ADD_RENT_MODAL,
+  OPEN_EDIT_RENTER_MODAL,
+  OPEN_PAY_RENT_MODAL,
   PAY_RENT,
   SET_RENTER_ID,
 } from "./actionTypes";
@@ -97,6 +100,21 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedRenterId: parseInt(action.payload)
+      }
+    case OPEN_EDIT_RENTER_MODAL:
+      return {
+        ...state,
+        editRenterModal: action.payload
+      }
+    case OPEN_ADD_RENT_MODAL:
+      return {
+        ...state,
+        addRentModal: action.payload
+      }
+    case OPEN_PAY_RENT_MODAL:
+      return {
+        ...state,
+        payRentModal: action.payload
       }
     default:
       return state;
