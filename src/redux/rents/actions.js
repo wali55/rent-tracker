@@ -1,4 +1,4 @@
-import { ADD_RENT, ADD_RENTER, EDIT_RENTER, LOAD_RENTERS, PAY_RENT } from "./actionTypes"
+import { ADD_RENT, ADD_RENTER, EDIT_RENTER, LOAD_RENTERS, PAY_RENT, SET_RENTER_ID } from "./actionTypes"
 
 export const loadRenters = (renters) => {
     return {
@@ -48,5 +48,12 @@ export const payRent = (renterId, payment) => {
             renterId,
             payment
         }
+    }
+}
+
+export const setRenterId = (renterId) => {
+    return {
+        type: SET_RENTER_ID,
+        payload: renterId
     }
 }

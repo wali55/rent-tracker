@@ -6,6 +6,7 @@ import PayRentModal from "./components/PayRentModal";
 import RentTracker from "./components/RentTracker";
 import fetchRenters from "./redux/rents/thunk/fetchRenters";
 import { useDispatch } from "react-redux";
+import EditRenterModal from "./components/EditRenterModal";
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function App() {
       <Header />
       {/* <AddRentModal /> */}
       {/* <PayRentModal /> */}
+      {/* <EditRenterModal /> */}
       <main className="block lg:flex gap-4 my-4">
         <div className="w-full lg:w-1/5">
           <AddRenter />

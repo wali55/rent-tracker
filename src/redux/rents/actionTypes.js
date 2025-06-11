@@ -4,3 +4,4 @@ export const EDIT_RENTER = "rent/editRenter";
 export const DELETE_RENTER = "rent/deleteRenter";
 export const ADD_RENT = "rent/addRent";
 export const PAY_RENT = "rent/payRent";
+export const SET_RENTER_ID = "rent/setRenterId";

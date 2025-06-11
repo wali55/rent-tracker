@@ -11,8 +11,8 @@ const SingleRenter = ({renter}) => {
       <td className="p-3">{name}</td>
       <td className="p-3">{mobile}</td>
       <td className="p-3">{baseRent}</td>
-      <td className="p-3">{lastRentMonth ?? "-"}</td>
-      <td className="p-3">{lastPaymentDate ?? "-"}</td>
+      <td className="p-3">{lastRentMonth || "-"}</td>
+      <td className="p-3">{lastPaymentDate || "-"}</td>
       <td className="p-3">{dueAmount}</td>
       <td className="p-3">
         {status === "paid" ? (<div className="bg-lime-700 text-center rounded-full w-fit px-2 py-0.5 text-xs font-medium">

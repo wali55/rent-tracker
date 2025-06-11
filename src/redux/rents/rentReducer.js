@@ -5,6 +5,7 @@ import {
   EDIT_RENTER,
   LOAD_RENTERS,
   PAY_RENT,
+  SET_RENTER_ID,
 } from "./actionTypes";
 import { initialState } from "./initialState";
 
@@ -92,6 +93,11 @@ const rentReducer = (state = initialState, action) => {
           }
         }),
       };
+    case SET_RENTER_ID:
+      return {
+        ...state,
+        selectedRenterId: parseInt(action.payload)
+      }
     default:
       return state;
   }
