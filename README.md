@@ -1,12 +1,44 @@
-# React + Vite
+# Rent Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** for the **Rent Tracker** application, built with **React.js**. It allows users to manage renters, track payments, and update rent-related information. The app is connected to a mock backend powered by **json-server**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- React.js
+- Redux 
+- json-server (mock API)
+- Fetch API
+- Tailwind CSS 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/wali55/rent-tracker.git
+cd rent-tracker
+```
+
+### 2. Install dependencies
+
+```bash
+npm start
+```
+
+### 3. Open a different terminal, go to server folder, install dependencies and run json server
+
+```bash
+cd server
+npm i
+npm start
+```
+
+### 4. On the root folder (rent-tracker), on the another terminal run the application
+
+```bash
+npm run dev
+```
