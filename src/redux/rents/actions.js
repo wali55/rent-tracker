@@ -1,4 +1,4 @@
-import { ADD_RENT, ADD_RENTER, EDIT_RENTER, LOAD_RENTERS, LOADING, OPEN_ADD_RENT_MODAL, OPEN_DELETE_RENTER_MODAL, OPEN_EDIT_RENTER_MODAL, OPEN_PAY_RENT_MODAL, PAY_RENT, SET_RENTER_ID } from "./actionTypes"
+import { ADD_RENT, ADD_RENTER, EDIT_RENTER, FILTER_RENTERS, LOAD_RENTERS, LOADING, OPEN_ADD_RENT_MODAL, OPEN_DELETE_RENTER_MODAL, OPEN_EDIT_RENTER_MODAL, OPEN_PAY_RENT_MODAL, PAY_RENT, SET_RENTER_ID } from "./actionTypes"
 
 export const loadRenters = (renters) => {
     return {
@@ -93,3 +93,9 @@ export const loading = (condition) => {
     }
 }
 
+export const filterRenters = (status) => {
+    return {
+        type: FILTER_RENTERS,
+        payload: status
+    }
+}

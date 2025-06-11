@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import SingleRenter from "./SingleRenter";
 
 const RenterTable = () => {
-     const TABLE_HEAD = [
+  const TABLE_HEAD = [
     "এপার্টমেন্ট",
     "নাম",
     "মোবাইল",
@@ -13,8 +13,12 @@ const RenterTable = () => {
     "স্ট্যাটাস",
     "অ্যাকশন",
   ];
-  
+
+  const selectedStatus = useSelector((state) => state.rents.selectedStatus);
+
   const rentersData = useSelector((state) => state.rents.renters);
+  const paidRenters = rentersData.filter((renter) => renter.status === "paid");
+  const dueRenters = rentersData.filter((renter) => renter.status === "due");
 
   return (
     <div className="w-full overflow-x-auto h-[400px] overflow-y-auto">
@@ -29,9 +33,17 @@ const RenterTable = () => {
           </tr>
         </thead>
         <tbody className="">
-          {rentersData.map((renter) => (
-            <SingleRenter key={renter.id} renter={renter} />
-          ))}
+          {selectedStatus === "paid"
+            ? paidRenters.map((renter) => (
+                <SingleRenter key={renter.id} renter={renter} />
+              ))
+            : selectedStatus === "due"
+            ? dueRenters.map((renter) => (
+                <SingleRenter key={renter.id} renter={renter} />
+              ))
+            : rentersData.map((renter) => (
+                <SingleRenter key={renter.id} renter={renter} />
+              ))}
         </tbody>
       </table>
     </div>

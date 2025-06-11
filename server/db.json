@@ -17,10 +17,10 @@
       "apartment": "1C",
       "mobile": "01767927356",
       "baseRent": "6500",
-      "lastRentMonth": "",
+      "lastRentMonth": "April",
       "lastPaymentDate": "",
-      "dueAmount": 0,
-      "status": "paid"
+      "dueAmount": 6800,
+      "status": "due"
     },
     {
       "id": "40b6",

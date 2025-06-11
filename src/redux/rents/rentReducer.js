@@ -3,6 +3,7 @@ import {
   ADD_RENTER,
   DELETE_RENTER,
   EDIT_RENTER,
+  FILTER_RENTERS,
   LOAD_RENTERS,
   LOADING,
   OPEN_ADD_RENT_MODAL,
@@ -133,6 +134,11 @@ const rentReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: action.payload
+      }
+    case FILTER_RENTERS:
+      return {
+        ...state,
+        selectedStatus: action.payload
       }
     default:
       return state;
